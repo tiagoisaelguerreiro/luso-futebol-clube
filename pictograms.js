@@ -15,7 +15,7 @@
   const D2R = Math.PI / 180;
   const GROUND = 152;
   const L = { shoulder: 29, top: 32, head: 44, headR: 8.2, upperArm: 17, foreArm: 16, thigh: 22, shin: 22 };
-  const REDUCE = document.documentElement.classList.contains('reduce-motion');
+  let motionPaused = document.documentElement.classList.contains('motion-paused');
 
   /* ---------- utilitários ---------- */
   const make = (tag, attrs = {}, parent) => {
@@ -705,7 +705,7 @@
     frame = running.size ? requestAnimationFrame(tick) : 0;
   };
   const play = pic => {
-    if (REDUCE || !pic || running.has(pic)) return;
+    if (motionPaused || !pic || running.has(pic)) return;
     pic.start = performance.now() - pic.t * pic.def.dur;
     running.add(pic);
     if (!frame) frame = requestAnimationFrame(tick);
@@ -714,7 +714,7 @@
 
   // Só anima o que está visível no ecrã
   const bySvg = new WeakMap();
-  const visible = new WeakSet();
+  const visible = new Set();
   const io = new IntersectionObserver(entries => {
     entries.forEach(e => {
       const pic = bySvg.get(e.target);
@@ -722,6 +722,17 @@
       else { visible.delete(e.target); pause(pic); }
     });
   }, { rootMargin: '80px 0px' });
+
+  const setPaused = paused => {
+    motionPaused = paused;
+    if (paused) {
+      running.clear();
+      cancelAnimationFrame(frame);
+      frame = 0;
+    } else {
+      visible.forEach(svg => play(bySvg.get(svg)));
+    }
+  };
 
   function mount(svg, key) {
     const old = bySvg.get(svg);
@@ -735,5 +746,5 @@
 
   document.querySelectorAll('svg[data-picto]').forEach(svg => mount(svg, svg.dataset.picto));
 
-  window.LusoPicto = { mount, scenes: SCENES, order: ORDER };
+  window.LusoPicto = { mount, scenes: SCENES, order: ORDER, setPaused };
 })();

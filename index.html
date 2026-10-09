@@ -13,20 +13,27 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css?v=2">
   <script>
     (function () {
       var d = document.documentElement;
       d.classList.replace('no-js', 'js');
-      // Respeita "reduzir movimento" do sistema; acrescentar ?motion ao endereço força as animações.
-      if (!/[?&]motion\b/.test(location.search) && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-        d.classList.add('reduce-motion');
-      }
+      // As animações começam ligadas; só a escolha do visitante as pausa.
+      try {
+        if (localStorage.getItem('luso-motion-paused') === 'true') d.classList.add('motion-paused');
+      } catch (e) { /* Sem armazenamento, mantém as animações ligadas. */ }
     })();
   </script>
 </head>
 <body>
   <a class="skip" href="#conteudo">Saltar para o conteúdo</a>
+  <button class="motion-toggle" type="button" hidden>
+    <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+      <path class="motion-toggle__pause" d="M7 5h4v14H7zm6 0h4v14h-4z" fill="currentColor"/>
+      <path class="motion-toggle__play" d="m8 5 11 7-11 7z" fill="currentColor"/>
+    </svg>
+    <span>Pausar animações</span>
+  </button>
 
   <!-- Emblema (versão estilizada: substituir pelo logótipo oficial) e ícones -->
   <svg class="sprite" aria-hidden="true">
@@ -565,7 +572,7 @@
     </div>
   </footer>
 
-  <script src="pictograms.js"></script>
-  <script src="script.js"></script>
+  <script src="pictograms.js?v=2"></script>
+  <script src="script.js?v=2"></script>
 </body>
 </html>

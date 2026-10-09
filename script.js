@@ -4,7 +4,25 @@
 (() => {
   const $ = (s, c = document) => c.querySelector(s);
   const $$ = (s, c = document) => [...c.querySelectorAll(s)];
-  const REDUCE = document.documentElement.classList.contains('reduce-motion');
+  const root = document.documentElement;
+  let motionPaused = root.classList.contains('motion-paused');
+  let refreshStageMotion = () => {};
+
+  /* ---------- Preferência de animações ---------- */
+  const motionToggle = $('.motion-toggle');
+  const updateMotionToggle = () => {
+    $('span', motionToggle).textContent = motionPaused ? 'Retomar animações' : 'Pausar animações';
+  };
+  motionToggle.hidden = false;
+  updateMotionToggle();
+  motionToggle.addEventListener('click', () => {
+    motionPaused = !motionPaused;
+    root.classList.toggle('motion-paused', motionPaused);
+    updateMotionToggle();
+    window.LusoPicto?.setPaused(motionPaused);
+    refreshStageMotion();
+    try { localStorage.setItem('luso-motion-paused', String(motionPaused)); } catch (e) {}
+  });
 
   /* ---------- Cabeçalho ---------- */
   const header = $('.header');
@@ -53,13 +71,13 @@
     const tabs = $$('.stage__tabs [role="tab"]');
     let index = 0;
     let timer = null;
+    let swapTimer = null;
     let inView = true;
-    let paused = false; // pára a rotação automática depois de o visitante escolher
 
     const schedule = () => {
       clearTimeout(timer);
       stage.classList.remove('is-auto');
-      if (REDUCE || !inView || paused) return;
+      if (motionPaused || !inView) return;
       const ms = Math.max(5200, scenes[tabs[index].dataset.key].dur * 2);
       stage.style.setProperty('--dur', `${ms}ms`);
       void stage.offsetWidth; // reinicia a barra de progresso
@@ -67,32 +85,41 @@
       timer = setTimeout(() => show(index + 1), ms);
     };
 
+    const swap = () => {
+      clearTimeout(swapTimer);
+      swapTimer = null;
+      mount(stageSvg, tabs[index].dataset.key);
+      stage.classList.remove('is-out');
+      schedule();
+    };
+
     const show = (i, animate = true) => {
+      clearTimeout(timer);
+      clearTimeout(swapTimer);
+      swapTimer = null;
       index = (i + tabs.length) % tabs.length;
       tabs.forEach((t, n) => {
         t.setAttribute('aria-selected', String(n === index));
         t.tabIndex = n === index ? 0 : -1;
       });
-      const swap = () => {
-        mount(stageSvg, tabs[index].dataset.key);
-        stage.classList.remove('is-out');
-        schedule();
-      };
-      if (animate && !REDUCE) {
+      if (animate && !motionPaused) {
         stage.classList.add('is-out');
-        setTimeout(swap, 280);
+        swapTimer = setTimeout(swap, 280);
       } else {
         swap();
       }
     };
 
+    refreshStageMotion = () => {
+      if (swapTimer !== null) swap(); else schedule();
+    };
+
     tabs.forEach((tab, i) => {
-      tab.addEventListener('click', () => { paused = true; if (i !== index) show(i); else schedule(); });
+      tab.addEventListener('click', () => { if (i !== index) show(i); else schedule(); });
       tab.addEventListener('keydown', e => {
         const step = { ArrowRight: 1, ArrowLeft: -1 }[e.key];
         if (!step) return;
         e.preventDefault();
-        paused = true;
         show(index + step);
         tabs[index].focus();
       });

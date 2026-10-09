@@ -578,9 +578,24 @@ section[id] { scroll-margin-top: calc(var(--header-h) + 12px); }
 @media (max-width: 860px) { .footer__grid { grid-template-columns: 1fr 1fr; } .footer__brand { grid-column: 1 / -1; } }
 @media (max-width: 480px) { .footer__grid { grid-template-columns: 1fr; } }
 
-/* ---------- Movimento reduzido (classe aplicada no <head>; ?motion força as animações) ---------- */
-.reduce-motion { scroll-behavior: auto; }
-.reduce-motion *, .reduce-motion *::before, .reduce-motion *::after {
-  animation-duration: .01ms !important; animation-delay: 0s !important; animation-iteration-count: 1 !important;
+/* ---------- Controlo de animações pelo visitante ---------- */
+.motion-toggle {
+  position: fixed; right: max(16px, env(safe-area-inset-right)); bottom: max(16px, env(safe-area-inset-bottom)); z-index: 60;
+  display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 10px 14px;
+  border: 1px solid rgba(255, 255, 255, .25); border-radius: var(--radius);
+  background: var(--navy-3); color: #fff; box-shadow: 0 3px 16px rgba(0, 0, 0, .2);
+  font: 600 13px/1.2 var(--font-body); cursor: pointer;
+}
+.motion-toggle[hidden] { display: none; }
+.motion-toggle:hover { background: var(--navy-2); }
+.motion-toggle:focus-visible { outline-color: var(--gold); }
+.motion-toggle .icon { width: 16px; height: 16px; color: var(--gold); }
+.motion-toggle__play, .motion-paused .motion-toggle__pause { display: none; }
+.motion-paused .motion-toggle__play { display: block; }
+.motion-paused { scroll-behavior: auto; }
+.motion-paused *, .motion-paused *::before, .motion-paused *::after {
+  animation-play-state: paused !important;
   transition-duration: .01ms !important; transition-delay: 0s !important;
 }
+.motion-paused .hero__copy > *, .motion-paused .stage { animation: none !important; }
+.js.motion-paused .reveal { opacity: 1; transform: none; }
