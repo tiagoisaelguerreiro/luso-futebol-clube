@@ -1,0 +1,571 @@
+<!doctype html>
+<html lang="pt-PT" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Luso Futebol Clube · Barreiro</title>
+  <meta name="description" content="Luso Futebol Clube, fundado a 11 de abril de 1920 no Barreiro. Clube eclético com badminton, patinagem artística, remo, ballet e danças, halterofilismo e krav maga. Sócio fundador n.º 1 da AF Setúbal.">
+  <meta name="theme-color" content="#0b1f4b">
+  <meta property="og:title" content="Luso Futebol Clube · Barreiro">
+  <meta property="og:description" content="Clube centenário e eclético do Barreiro, fundado em 1920.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 124'%3E%3Cpath d='M26 26 22 10l14 8 14-12 14 12 14-8-4 16z' fill='%23f2b705'/%3E%3Cpath d='M6 30h88L50 120z' fill='%23c8102e'/%3E%3Cpath d='M15 35h70L50 109z' fill='%23f2b705'/%3E%3Cpath d='M21 39h58L50 99z' fill='%231a49c4'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script>
+    (function () {
+      var d = document.documentElement;
+      d.classList.replace('no-js', 'js');
+      // Respeita "reduzir movimento" do sistema; acrescentar ?motion ao endereço força as animações.
+      if (!/[?&]motion\b/.test(location.search) && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        d.classList.add('reduce-motion');
+      }
+    })();
+  </script>
+</head>
+<body>
+  <a class="skip" href="#conteudo">Saltar para o conteúdo</a>
+
+  <!-- Emblema (versão estilizada: substituir pelo logótipo oficial) e ícones -->
+  <svg class="sprite" aria-hidden="true">
+    <defs>
+      <linearGradient id="jshade" x1="0" x2="1">
+        <stop offset="0" stop-color="#000" stop-opacity=".22"/>
+        <stop offset=".25" stop-color="#000" stop-opacity="0"/>
+        <stop offset=".5" stop-color="#fff" stop-opacity=".12"/>
+        <stop offset=".75" stop-color="#000" stop-opacity="0"/>
+        <stop offset="1" stop-color="#000" stop-opacity=".22"/>
+      </linearGradient>
+    </defs>
+    <symbol id="crest" viewBox="0 0 100 124">
+      <path d="M26 26 22 10l14 8 14-12 14 12 14-8-4 16z" fill="#f2b705"/>
+      <circle cx="22" cy="10" r="2.6" fill="#f2b705"/>
+      <circle cx="50" cy="6" r="3.2" fill="#f2b705"/>
+      <circle cx="78" cy="10" r="2.6" fill="#f2b705"/>
+      <path d="M6 30h88L50 120z" fill="#c8102e" stroke="#c8102e" stroke-width="4" stroke-linejoin="round"/>
+      <path d="M15 35h70L50 109z" fill="#f2b705"/>
+      <path d="M21 39h58L50 99z" fill="#1a49c4"/>
+      <text x="50" y="63" text-anchor="middle" font-family="Barlow Condensed, Arial Narrow, sans-serif" font-weight="700" font-size="19" letter-spacing="1" fill="#fff">LFC</text>
+      <circle cx="50" cy="77" r="7" fill="#fff"/>
+      <path d="M50 73.6l3.3 2.4-1.3 3.9h-4l-1.3-3.9z" fill="#0b1f4b"/>
+    </symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-external" viewBox="0 0 24 24"><path d="M14 5h5v5M19 5l-8 8M18 14v4a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-trophy" viewBox="0 0 24 24"><path d="M8 4h8v5a4 4 0 0 1-8 0zM8 6H5v1a3 3 0 0 0 3 3M16 6h3v1a3 3 0 0 1-3 3M12 13v4M9 20h6M10 17h4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z" fill="currentColor"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><path d="M4.5 5h15A1.5 1.5 0 0 1 21 6.5v11a1.5 1.5 0 0 1-1.5 1.5h-15A1.5 1.5 0 0 1 3 17.5v-11A1.5 1.5 0 0 1 4.5 5zM3.5 6.5l8.5 6 8.5-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-7-6.1-7-11.5a7 7 0 0 1 14 0C19 14.9 12 21 12 21z" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="9.5" r="2.5" fill="none" stroke="currentColor" stroke-width="1.8"/></symbol>
+    <symbol id="i-book" viewBox="0 0 24 24"><path d="M5 4.5A1.5 1.5 0 0 1 6.5 3H19v15H6.5A1.5 1.5 0 0 0 5 19.5zM5 19.5A1.5 1.5 0 0 0 6.5 21H19v-3" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+    <symbol id="i-facebook" viewBox="0 0 24 24"><path d="M13.5 21v-7.5h2.5l.4-3h-2.9V8.6c0-.9.3-1.5 1.5-1.5h1.5V4.4c-.3 0-1.2-.1-2.2-.1-2.2 0-3.7 1.3-3.7 3.8v2.4H8v3h2.6V21z" fill="currentColor"/></symbol>
+    <symbol id="i-instagram" viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="5" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor"/></symbol>
+  </svg>
+
+  <!-- Barra superior -->
+  <div class="topbar">
+    <div class="container topbar__inner">
+      <p>Pessoa Coletiva de Utilidade Pública · Sócio fundador n.º 1 da AF Setúbal</p>
+      <ul class="topbar__links">
+        <li><a href="tel:+351212073178"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>21 207 31 78</a></li>
+        <li><a href="mailto:lusobarreiro@hotmail.com"><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg>lusobarreiro@hotmail.com</a></li>
+        <li><a href="https://www.facebook.com/lusofc" target="_blank" rel="noopener" aria-label="Facebook do Luso F.C."><svg class="icon" aria-hidden="true"><use href="#i-facebook"/></svg></a></li>
+        <li><a href="https://www.instagram.com/lusofc1920/" target="_blank" rel="noopener" aria-label="Instagram do Luso F.C."><svg class="icon" aria-hidden="true"><use href="#i-instagram"/></svg></a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Cabeçalho -->
+  <header class="header">
+    <div class="container header__inner">
+      <a class="brand" href="#topo">
+        <svg class="brand__crest" aria-hidden="true"><use href="#crest"/></svg>
+        <span class="brand__text"><strong>Luso Futebol Clube</strong><span>Barreiro · Desde 1920</span></span>
+      </a>
+      <nav class="nav" id="nav" aria-label="Principal">
+        <ul>
+          <li><a href="#clube">O Clube</a></li>
+          <li><a href="#modalidades">Modalidades</a></li>
+          <li><a href="#noticias">Notícias</a></li>
+          <li><a href="#historia">História</a></li>
+          <li><a href="#glorias">Glórias</a></li>
+          <li><a href="#contactos">Contactos</a></li>
+        </ul>
+      </nav>
+      <a class="btn btn--gold header__cta" href="#socios">Seja sócio</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav">
+        <span></span><span></span><span></span>
+        <span class="sr-only">Abrir menu</span>
+      </button>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <!-- Destaque -->
+    <section class="hero" id="topo">
+      <div class="container hero__grid">
+        <div class="hero__copy">
+          <p class="eyebrow" style="--i:0">Fundado a 11 de abril de 1920</p>
+          <h1 style="--i:1">Luso Futebol Clube</h1>
+          <p class="hero__motto" style="--i:2">Do Barreiro para o Mundo</p>
+          <p class="hero__lead" style="--i:3">
+            Clube centenário e eclético do Barreiro, sócio fundador n.º 1 da Associação de Futebol de Setúbal.
+            Entre as suas modalidades estão o badminton, a patinagem artística, o remo, o ballet e as danças, o halterofilismo e o krav maga.
+          </p>
+          <div class="hero__actions" style="--i:4">
+            <a class="btn btn--gold" href="#modalidades">Ver modalidades <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            <a class="btn btn--ghost" href="#socios">Seja sócio</a>
+          </div>
+        </div>
+
+        <figure class="stage" aria-label="Modalidades do clube em animação">
+          <div class="stage__canvas"><svg id="stageSvg"></svg></div>
+          <div class="stage__tabs" role="tablist" aria-label="Escolher modalidade">
+            <button type="button" role="tab" aria-selected="true" data-key="badminton">Badminton<span aria-hidden="true"></span></button>
+            <button type="button" role="tab" aria-selected="false" data-key="patinagem">Patinagem<span aria-hidden="true"></span></button>
+            <button type="button" role="tab" aria-selected="false" data-key="remo">Remo<span aria-hidden="true"></span></button>
+            <button type="button" role="tab" aria-selected="false" data-key="ballet">Dança<span aria-hidden="true"></span></button>
+            <button type="button" role="tab" aria-selected="false" data-key="halterofilismo">Halterofilismo<span aria-hidden="true"></span></button>
+            <button type="button" role="tab" aria-selected="false" data-key="kravmaga">Krav Maga<span aria-hidden="true"></span></button>
+          </div>
+        </figure>
+      </div>
+    </section>
+
+    <!-- Números -->
+    <section class="facts" aria-label="O clube em números">
+      <div class="container">
+        <dl class="facts__grid">
+          <div class="fact reveal"><dt>1920</dt><dd>Ano de fundação</dd></div>
+          <div class="fact reveal" style="--d:.06s"><dt>N.º 1</dt><dd>Sócio fundador da AF Setúbal</dd></div>
+          <div class="fact reveal" style="--d:.12s"><dt>1979</dt><dd>Pessoa Coletiva de Utilidade Pública</dd></div>
+          <div class="fact reveal" style="--d:.18s"><dt>6</dt><dd>Modalidades no clube</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- O Clube -->
+    <section class="section" id="clube">
+      <div class="container split">
+        <div class="split__text">
+          <p class="eyebrow reveal">O Clube</p>
+          <h2 class="section-title reveal">Um clube centenário e eclético</h2>
+          <div class="prose reveal">
+            <p>
+              O Luso nasceu entre 1919 e 1920, fundado por um grupo de jovens corticeiros e ferroviários no Largo do Casal,
+              hoje Largo Gago Coutinho e Sacadura Cabral. A data oficial de fundação é 11 de abril de 1920.
+            </p>
+            <p>
+              Durante quase um século o futebol esteve no centro da vida do clube. Hoje o Luso é um clube eclético,
+              em que o badminton, a patinagem artística e o remo somam títulos e presenças em campeonatos nacionais.
+            </p>
+            <p>
+              Fora do desporto, o clube abriu na sede da Travessa do Leão uma escola gratuita onde sócios e não sócios
+              aprendiam as primeiras letras, e publicou o boletim <em>O Luso</em> entre 1949 e 1986.
+              É Pessoa Coletiva de Utilidade Pública desde 1979.
+            </p>
+          </div>
+          <dl class="club-meta reveal">
+            <div><dt>Presidente da Direção</dt><dd>João Latas</dd></div>
+            <div><dt>Sede e pavilhão</dt><dd>Av. Henrique Galvão, 26 a 30, Barreiro</dd></div>
+          </dl>
+        </div>
+        <figure class="photo reveal">
+          <img src="https://2adb278104.cbaul-cdnwnd.com/06abb6ab32a47ec7ffaf02737198226a/200000046-8e6c08f658/SEDE%20site.jpg"
+               alt="Edifício-sede do Luso Futebol Clube, com fachada branca e faixas verticais azuis"
+               width="600" height="451" loading="lazy" decoding="async" referrerpolicy="no-referrer">
+          <figcaption>Sede do Luso Futebol Clube</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- Modalidades -->
+    <section class="section section--alt" id="modalidades">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow reveal">Modalidades</p>
+            <h2 class="section-title reveal">Seis modalidades, um clube</h2>
+          </div>
+          <p class="reveal">Para horários, mensalidades e inscrições, contacte a secretaria do clube.</p>
+        </div>
+
+        <div class="sports">
+          <article class="sport reveal">
+            <div class="sport__stage"><svg data-picto="badminton"></svg></div>
+            <div class="sport__body">
+              <span class="tag">Desde 2005</span>
+              <h3>Badminton</h3>
+              <p>Uma das secções mais premiadas do clube nos últimos anos, com atletas da formação aos veteranos em provas regionais e nacionais.</p>
+              <p class="sport__win"><svg class="icon" aria-hidden="true"><use href="#i-trophy"/></svg>Vários títulos nacionais desde 2022</p>
+            </div>
+          </article>
+          <article class="sport reveal" style="--d:.06s">
+            <div class="sport__stage"><svg data-picto="patinagem"></svg></div>
+            <div class="sport__body">
+              <span class="tag">Show e precisão</span>
+              <h3>Patinagem Artística</h3>
+              <p>Patinagem de grupo, com festivais no pavilhão do clube e participação em campeonatos nacionais.</p>
+              <p class="sport__win"><svg class="icon" aria-hidden="true"><use href="#i-trophy"/></svg>Estreia no Campeonato Nacional em 2022</p>
+            </div>
+          </article>
+          <article class="sport reveal" style="--d:.12s">
+            <div class="sport__stage"><svg data-picto="remo"></svg></div>
+            <div class="sport__body">
+              <span class="tag">Formação e seniores</span>
+              <h3>Remo</h3>
+              <p>Atletas dos benjamins aos seniores, em regatas nacionais como o Troféu Mestre de Avis.</p>
+              <p class="sport__win"><svg class="icon" aria-hidden="true"><use href="#i-trophy"/></svg>Título nacional de yole seniores</p>
+            </div>
+          </article>
+          <article class="sport reveal">
+            <div class="sport__stage"><svg data-picto="ballet"></svg></div>
+            <div class="sport__body">
+              <span class="tag">Ballet · Contemporâneo</span>
+              <h3>Ballet e Danças</h3>
+              <p>Aulas de ballet e de danças contemporâneas no pavilhão do clube.</p>
+            </div>
+          </article>
+          <article class="sport reveal" style="--d:.06s">
+            <div class="sport__stage"><svg data-picto="halterofilismo"></svg></div>
+            <div class="sport__body">
+              <span class="tag">Força e técnica</span>
+              <h3>Halterofilismo</h3>
+              <p>Uma das modalidades com mais tradição no Luso. Voltou à competição em 2017, depois de 17 anos de paragem.</p>
+              <p class="sport__win"><svg class="icon" aria-hidden="true"><use href="#i-trophy"/></svg>Títulos nacionais na história do clube</p>
+            </div>
+          </article>
+          <article class="sport reveal" style="--d:.12s">
+            <div class="sport__stage"><svg data-picto="kravmaga"></svg></div>
+            <div class="sport__body">
+              <span class="tag">Defesa pessoal</span>
+              <h3>Krav Maga</h3>
+              <p>Sistema de defesa pessoal que trabalha a técnica, a reação e a condição física.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Resultados -->
+    <section class="section" id="resultados">
+      <div class="container results">
+        <div class="results__intro">
+          <p class="eyebrow reveal">Resultados</p>
+          <h2 class="section-title reveal">Palmarés recente</h2>
+          <p class="reveal">Títulos e pódios nacionais dos atletas do Luso nas últimas épocas.</p>
+          <p class="results__source reveal">Fontes: Gala do Desporto da Câmara Municipal do Barreiro, Assembleia Municipal do Barreiro e comunicados do clube. Nos resultados distinguidos na Gala do Desporto, o ano indicado é o da distinção.</p>
+        </div>
+        <ol class="results__list">
+          <li class="reveal"><span class="results__year">2025</span><span class="results__sport">Badminton</span><p>Equipa sénior masculina distinguida na Gala do Desporto pelo 3.º lugar no Campeonato Nacional de Equipas Seniores</p></li>
+          <li class="reveal"><span class="results__year">2024</span><span class="results__sport">Badminton</span><p>Maria Malacute, campeã nacional de pares senhoras (Categoria C) com Fabiana Pereira e 1.ª do ranking nacional de pares senhoras</p></li>
+          <li class="reveal"><span class="results__year">2024</span><span class="results__sport">Remo</span><p>Catarina Goulart e Catarina Lamego distinguidas na Gala do Desporto pelo título nacional de yole seniores</p></li>
+          <li class="reveal"><span class="results__year">2024</span><span class="results__sport">Badminton</span><p>Ana Boazinha distinguida na Gala do Desporto pelo título nacional de singulares senhoras (Categoria D)</p></li>
+          <li class="reveal"><span class="results__year">2022</span><span class="results__sport">Badminton</span><p>Maria Malacute, campeã nacional de singulares senhoras (Categoria D)</p></li>
+          <li class="reveal"><span class="results__year">2022</span><span class="results__sport">Badminton</span><p>Luís Durando, campeão nacional de pares em veteranos</p></li>
+          <li class="reveal"><span class="results__year">2022</span><span class="results__sport">Patinagem</span><p>Estreia no Campeonato Nacional de Show e Precisão, com a equipa Time to Shine: 7.º lugar em grupos grandes e em grupos pequenos</p></li>
+          <li class="reveal"><span class="results__year">2022</span><span class="results__sport">Remo</span><p>Ouro e prata em skiff benjamim e prata em juniores femininos no Troféu Mestre de Avis</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Notícias -->
+    <section class="section section--alt" id="noticias">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow reveal">Notícias</p>
+            <h2 class="section-title reveal">Últimas do clube</h2>
+          </div>
+          <a class="link link--inline reveal" href="https://www.facebook.com/lusofc" target="_blank" rel="noopener">Mais notícias no Facebook <svg class="icon" aria-hidden="true"><use href="#i-external"/></svg></a>
+        </div>
+        <div class="news">
+          <article class="news__item reveal">
+            <p class="news__meta"><time datetime="2026-04-13">13 abr 2026</time><span>Clube</span></p>
+            <h3>106.º aniversário celebrado na sede</h3>
+            <p>Sessão solene com concerto da Orquestra Baía e homenagem aos sócios com 25 e 50 anos de filiação.</p>
+            <a class="news__link" href="https://www.rostos.pt/inicio2.asp?cronica=12001994&amp;mostra=2&amp;seccao=associativismo&amp;titulo=BARREIRO-Luso-Futebol-Clube-celebrou-1" target="_blank" rel="noopener">Ler no Rostos <svg class="icon" aria-hidden="true"><use href="#i-external"/></svg></a>
+          </article>
+          <article class="news__item reveal" style="--d:.06s">
+            <p class="news__meta"><time datetime="2026-03-29">29 mar 2026</time><span>Badminton</span></p>
+            <h3>Torneio Latinhas assinala 20 anos de badminton</h3>
+            <p>Torneio interno de pares, com recolha de alimentos para animais, entregues a uma associação do concelho.</p>
+            <a class="news__link" href="https://www.rostos.pt/inicio2.asp?cronica=12001982&amp;mostra=2" target="_blank" rel="noopener">Ler no Rostos <svg class="icon" aria-hidden="true"><use href="#i-external"/></svg></a>
+          </article>
+          <article class="news__item reveal" style="--d:.12s">
+            <p class="news__meta"><time datetime="2025-11-29">29 nov 2025</time><span>Gala do Desporto</span></p>
+            <h3>Badminton distinguido pelo município</h3>
+            <p>Medalha de ouro para Maria Malacute e de bronze para a equipa sénior masculina, 3.ª no Campeonato Nacional de Equipas.</p>
+            <a class="news__link" href="https://www.cm-barreiro.pt/eventos/gala-do-desporto-2025/" target="_blank" rel="noopener">Ver a gala <svg class="icon" aria-hidden="true"><use href="#i-external"/></svg></a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Legado -->
+    <section class="legacy" id="legado">
+      <div class="container">
+        <div class="legacy__head">
+          <div>
+            <p class="eyebrow reveal">Legado</p>
+            <h2 class="section-title reveal">O futebol que nos deu o nome</h2>
+          </div>
+          <div class="legacy__text reveal">
+            <p>
+              Durante quase um século o futebol foi o coração do Luso. O clube disputou 27 épocas na II Divisão Nacional,
+              chegou aos quartos de final do Campeonato de Portugal em 1931/32 e foi campeão distrital em 1959/60.
+            </p>
+            <p>
+              A última equipa sénior competiu em 2016/17, na II Divisão Distrital. O Campo da Quinta Pequena,
+              casa do futebol do clube desde 1926, acabou por ser demolido.
+            </p>
+          </div>
+        </div>
+
+        <dl class="legacy__stats reveal">
+          <div><dt>4</dt><dd>presenças no Campeonato de Portugal</dd></div>
+          <div><dt>27</dt><dd>épocas na II Divisão Nacional</dd></div>
+          <div><dt>16</dt><dd>épocas na III Divisão</dd></div>
+          <div><dt>17</dt><dd>participações na Taça de Portugal</dd></div>
+        </dl>
+
+        <div class="legacy__panels">
+          <figure class="memory reveal">
+            <div class="memory__stage"><svg data-picto="futebol"></svg></div>
+            <figcaption><strong>Futebol</strong><span>1920 – 2017 · Campo da Quinta Pequena</span></figcaption>
+          </figure>
+          <figure class="memory reveal" style="--d:.08s">
+            <div class="memory__stage"><svg data-picto="basquetebol"></svg></div>
+            <figcaption><strong>Basquetebol</strong><span>Cofundador da associação distrital e duas vezes campeão nacional da II Divisão</span></figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- História -->
+    <section class="section" id="historia">
+      <div class="container history">
+        <div class="history__intro">
+          <p class="eyebrow reveal">História</p>
+          <h2 class="section-title reveal">Cronologia</h2>
+          <p class="reveal">Os momentos que marcaram a vida do clube, desde a fundação no Largo do Casal até aos dias de hoje.</p>
+          <div class="founders reveal">
+            <h3>Fundadores</h3>
+            <p>
+              Augusto Ferreira, Joaquim Paleta, Aníbal Praça, Manuel Preto, Paulo Maria Fernandes, Joaquim Figueiredo,
+              João Pireza, António Ricardo, António José Lopes, António José da Costa, Manuel Salvador Preto,
+              António Anin, Augusto da Silva e Joaquim Capela.
+            </p>
+          </div>
+        </div>
+
+        <ol class="timeline">
+          <li class="reveal"><span class="timeline__year">1920</span><div><h3>Fundação</h3><p>Jovens corticeiros e ferroviários fundam o clube no Largo do Casal. As primeiras reuniões da direção fazem-se na Taberna do Borges, na Rua Aguiar.</p></div></li>
+          <li class="reveal"><span class="timeline__year">1925</span><div><h3>Primeiro jogo oficial</h3><p>Vitória por 2-1 frente ao Paio Pires, em abril. Em junho abre a primeira sede oficial, na Rua Heliodoro Salgado, n.º 8.</p></div></li>
+          <li class="reveal"><span class="timeline__year">1926</span><div><h3>Campo da Quinta Pequena</h3><p>Inaugurado a 9 de maio, com a Banda dos Penicheiros. Seria a casa do futebol do clube até 2017.</p></div></li>
+          <li class="reveal"><span class="timeline__year">1927</span><div><h3>Fundador da AF Setúbal</h3><p>A 5 de maio, o Luso é um dos 13 clubes fundadores da Associação de Futebol de Setúbal e fica com o número de sócio 1.</p></div></li>
+          <li class="reveal"><span class="timeline__year">1928</span><div><h3>Sede da Travessa do Leão</h3><p>A 28 de setembro o clube instala-se na Travessa do Leão, n.º 4. Foi aí que inaugurou a sua primeira escola, gratuita, onde sócios e não sócios aprendiam as primeiras letras.</p></div></li>
+          <li class="reveal"><span class="timeline__year">1932</span><div><h3>Quartos de final do Campeonato de Portugal</h3><p>Em 1931/32 o Luso elimina o Lusitano VRSA e o Boavista e só cai frente ao Benfica. Manuel Soeiro estreia-se pela Seleção Nacional.</p></div></li>
+          <li class="reveal"><span class="timeline__year">1949</span><div><h3>Boletim <em>O Luso</em></h3><p>Começa a publicação do boletim mensal do clube, editado sem interrupções até 1986.</p></div></li>
+          <li class="reveal"><span class="timeline__year">1960</span><div><h3>Campeão distrital</h3><p>O Luso conquista o campeonato da 1.ª Divisão da AF Setúbal na época 1959/60.</p></div></li>
+          <li class="reveal"><span class="timeline__year">1979</span><div><h3>Utilidade Pública</h3><p>O clube recebe o estatuto de Pessoa Coletiva de Utilidade Pública.</p></div></li>
+          <li class="reveal"><span class="timeline__year">2005</span><div><h3>Nasce o badminton</h3><p>É criada a secção de badminton, hoje uma das mais premiadas do clube.</p></div></li>
+          <li class="reveal"><span class="timeline__year">2017</span><div><h3>Fim do futebol sénior</h3><p>A equipa sénior disputa a sua última época, na II Divisão Distrital. A partir daí, a atividade do clube centra-se nas restantes modalidades.</p></div></li>
+          <li class="reveal"><span class="timeline__year">2020</span><div><h3>Centenário</h3><p>A Assembleia Municipal do Barreiro aprova por unanimidade uma saudação aos 100 anos do clube.</p></div></li>
+          <li class="reveal"><span class="timeline__year">2026</span><div><h3>106 anos</h3><p>O aniversário é celebrado na sede com uma sessão solene e homenagem aos sócios com 25 e 50 anos de filiação.</p></div></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Equipamentos -->
+    <section class="section section--alt" id="equipamentos">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow reveal">Equipamentos</p>
+            <h2 class="section-title reveal">A evolução da camisola</h2>
+          </div>
+          <p class="reveal">Do vermelho e branco dos primeiros anos ao azul que identifica o clube desde 1935. Ilustrações feitas a partir das descrições do arquivo do clube.</p>
+        </div>
+        <ol class="kits">
+          <li class="kit reveal"><div class="kit__art" data-kit="0"></div><strong>A primeira</strong><p>Vermelha com riscas brancas, igual à do Barreirense, oferecida por “Tetas”, lusófilo dos quatro costados.</p></li>
+          <li class="kit reveal" style="--d:.06s"><div class="kit__art" data-kit="1"></div><strong>1926</strong><p>Verde e amarela, com calções azuis e meias brancas.</p></li>
+          <li class="kit reveal" style="--d:.12s"><div class="kit__art" data-kit="2"></div><strong>Primeiro oficial</strong><p>Riscas roxas e brancas, calções e meias pretos, após a filiação em Setúbal.</p></li>
+          <li class="kit reveal" style="--d:.18s"><div class="kit__art" data-kit="3"></div><strong>1935</strong><p>Camisola azul, calções e meias pretos.</p></li>
+          <li class="kit reveal" style="--d:.24s"><div class="kit__art" data-kit="4"></div><strong>Mais recente</strong><p>Camisola azul, calções brancos e meias azuis.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Glórias -->
+    <section class="section" id="glorias">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow reveal">Glórias Lusófilas</p>
+            <h2 class="section-title reveal">Formados no Luso</h2>
+          </div>
+          <p class="reveal">Jogadores que passaram pelo clube e chegaram aos grandes palcos do desporto português.</p>
+        </div>
+
+        <div class="legends">
+          <article class="legend reveal">
+            <p class="legend__role">Avançado · Sporting e Seleção Nacional</p>
+            <h3>Manuel Soeiro</h3>
+            <p>Estreou-se pela Seleção Nacional em 1932, ainda como jogador do Luso, com um golo à Jugoslávia. No Sporting foi o melhor marcador da primeira edição do Campeonato da Liga, em 1934/35, e voltou a sê-lo em 1936/37.</p>
+            <dl class="legend__stats">
+              <div><dt>200+</dt><dd>golos em jogos oficiais pelo Sporting</dd></div>
+              <div><dt>12</dt><dd>internacionalizações</dd></div>
+              <div><dt>2</dt><dd>vezes melhor marcador da Liga</dd></div>
+            </dl>
+          </article>
+          <article class="legend reveal" style="--d:.08s">
+            <p class="legend__role">Guarda-redes · Sporting e Seleção Nacional</p>
+            <h3>Joaquim Carvalho</h3>
+            <p>Nascido no Barreiro em 1937, começou no Luso em 1955. Em 1958 assinou pelo Sporting, com o qual venceu a Taça dos Vencedores das Taças em 1964. Foi um dos Magriços no Mundial de 1966.</p>
+            <dl class="legend__stats">
+              <div><dt>1964</dt><dd>Taça dos Vencedores das Taças</dd></div>
+              <div><dt>3.º</dt><dd>lugar no Mundial de 1966</dd></div>
+              <div><dt>3</dt><dd>Campeonatos Nacionais</dd></div>
+            </dl>
+          </article>
+        </div>
+
+        <div class="others reveal">
+          <h3>Outros nomes que passaram pelo Luso</h3>
+          <ul>
+            <li><strong>Azevedo</strong><span>Histórico guarda-redes do Sporting</span></li>
+            <li><strong>Artur Vaz</strong><span>Médio que se destacou no Vitória de Setúbal</span></li>
+            <li><strong>Patalino</strong><span>Figura maior da história de O Elvas</span></li>
+            <li><strong>António Barradas</strong><span>Antigo guarda-redes do FC Porto</span></li>
+            <li><strong>Paulo Rocha</strong><span>Médio internacional português, passou pela formação do clube</span></li>
+            <li><strong>Nuno Belchior</strong><span>Internacional português de futebol de praia</span></li>
+          </ul>
+        </div>
+
+        <div class="titles reveal">
+          <p>Títulos nacionais conquistados pelo clube em</p>
+          <ul>
+            <li>Basquetebol</li>
+            <li>Halterofilismo</li>
+            <li>Luta Greco-Romana</li>
+            <li>Badminton</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sócios -->
+    <section class="members" id="socios">
+      <div class="container members__grid">
+        <div>
+          <p class="eyebrow reveal">Sócios</p>
+          <h2 class="section-title reveal">Seja sócio do Luso</h2>
+          <p class="members__lead reveal">
+            Para se tornar sócio, contacte a secretaria do clube. Os sócios são a base de um clube que vive,
+            há mais de cem anos, do empenho dos seus associados e dos seus órgãos sociais.
+          </p>
+          <p class="members__books reveal">
+            <svg class="icon" aria-hidden="true"><use href="#i-book"/></svg>
+            <span>À venda na secretaria: o <strong>Livro do Centenário</strong> e o livro sobre a construção da sede.</span>
+          </p>
+        </div>
+        <ul class="members__actions">
+          <li class="reveal">
+            <a href="tel:+351212073178">
+              <svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>
+              <span><small>Telefone</small>21 207 31 78</span>
+            </a>
+          </li>
+          <li class="reveal" style="--d:.06s">
+            <a href="mailto:lusobarreiro@hotmail.com">
+              <svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg>
+              <span><small>Email</small>lusobarreiro@hotmail.com</span>
+            </a>
+          </li>
+          <li class="reveal" style="--d:.12s">
+            <a href="https://www.google.com/maps/search/?api=1&amp;query=Avenida%20Henrique%20Galv%C3%A3o%2026%2C%202830%20Barreiro" target="_blank" rel="noopener">
+              <svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg>
+              <span><small>Secretaria</small>Av. Henrique Galvão, 26 a 30, Barreiro</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Contactos -->
+    <section class="section" id="contactos">
+      <div class="container contact">
+        <div>
+          <p class="eyebrow reveal">Contactos</p>
+          <h2 class="section-title reveal">Onde estamos</h2>
+          <dl class="contact__list reveal">
+            <div><dt>Morada</dt><dd>Av. Henrique Galvão, 26 a 30<br>2830 Barreiro</dd></div>
+            <div><dt>Telefone</dt><dd><a href="tel:+351212073178">21 207 31 78</a></dd></div>
+            <div><dt>Email</dt><dd><a href="mailto:lusobarreiro@hotmail.com">lusobarreiro@hotmail.com</a></dd></div>
+            <div><dt>Facebook</dt><dd><a href="https://www.facebook.com/lusofc" target="_blank" rel="noopener">facebook.com/lusofc</a></dd></div>
+            <div><dt>Instagram</dt><dd><a href="https://www.instagram.com/lusofc1920/" target="_blank" rel="noopener">@lusofc1920</a></dd></div>
+          </dl>
+        </div>
+        <div class="map reveal">
+          <iframe title="Mapa com a localização do Luso Futebol Clube"
+                  src="https://www.google.com/maps?q=Avenida%20Henrique%20Galv%C3%A3o%2026%2C%202830%20Barreiro&amp;z=16&amp;output=embed"
+                  loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <a class="brand brand--light" href="#topo">
+          <svg class="brand__crest" aria-hidden="true"><use href="#crest"/></svg>
+          <span class="brand__text"><strong>Luso Futebol Clube</strong><span>Do Barreiro para o Mundo</span></span>
+        </a>
+        <p>Fundado a 11 de abril de 1920. Pessoa Coletiva de Utilidade Pública desde 1979.</p>
+        <ul class="footer__social">
+          <li><a href="https://www.facebook.com/lusofc" target="_blank" rel="noopener" aria-label="Facebook"><svg class="icon" aria-hidden="true"><use href="#i-facebook"/></svg></a></li>
+          <li><a href="https://www.instagram.com/lusofc1920/" target="_blank" rel="noopener" aria-label="Instagram"><svg class="icon" aria-hidden="true"><use href="#i-instagram"/></svg></a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Clube</h4>
+        <ul>
+          <li><a href="#clube">O Clube</a></li>
+          <li><a href="#noticias">Notícias</a></li>
+          <li><a href="#historia">História</a></li>
+          <li><a href="#glorias">Glórias</a></li>
+          <li><a href="#socios">Sócios</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Modalidades</h4>
+        <ul>
+          <li><a href="#modalidades">Badminton</a></li>
+          <li><a href="#modalidades">Patinagem Artística</a></li>
+          <li><a href="#modalidades">Remo</a></li>
+          <li><a href="#modalidades">Ballet e Danças</a></li>
+          <li><a href="#modalidades">Halterofilismo</a></li>
+          <li><a href="#modalidades">Krav Maga</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contactos</h4>
+        <ul>
+          <li>Av. Henrique Galvão, 26 a 30<br>2830 Barreiro</li>
+          <li><a href="tel:+351212073178">21 207 31 78</a></li>
+          <li><a href="mailto:lusobarreiro@hotmail.com">lusobarreiro@hotmail.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer__bottom">
+      <span>© <span id="year">2026</span> Luso Futebol Clube</span>
+      <span>Sócio fundador n.º 1 da Associação de Futebol de Setúbal</span>
+    </div>
+  </footer>
+
+  <script src="pictograms.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
